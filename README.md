@@ -2,7 +2,7 @@
 
 Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves.
 
-Tested on Inkscape 1.2 and 1.3 beta
+Requires Inkscape 1.2 or newer (tested on 1.3 beta) for full functionality. Making a line without labeling the nodes works on Inkscape 1.1
 
 
 ![](images/summary.jpeg)
