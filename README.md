@@ -1,6 +1,6 @@
 # Inkscape-Unroll-Flatten-Extension
 
-Unroll a path into a straight line, maintaining the node spacings that were on the original path.
+Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path.
 
 Segments can be straight or bezier curves.
 
@@ -14,13 +14,15 @@ Select your path (or paths) and run the extension
 
 Options to draw just a straight line with nodes, add numbered dots, or label the segment lengths. You can choose the decimal precision, scale factor and unit for the segment length labels.
 
-An example usage is making a sewing pattern for a bag. You've drawn the side panels and you need to calculate the middle strip length.
+------------------------------------------------------------------------
+
+An example usage is making a sewing pattern for a bag, and you want to add alignment marks/notches. You've drawn the side panels and you need to calculate the middle strip length.
 
 ![](images/bag.png)
 
 Draw the side panels, select it, then run the extension (Extensions - Visualise Path - Unroll and Flatten)
 
-This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path
+This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path, which you can use for adding alignment marks, notches, text labels etc.
 
 ![](images/unrolled.png)
 
