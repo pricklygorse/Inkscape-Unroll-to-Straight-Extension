@@ -49,10 +49,10 @@ Another example
 
 # Prickly Gorse Sewing Guides
 
-I wrote this to assist with making sewing patterns for bike and backpacking bags. If you are interested in sewing your own outdoor gear, see [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my main website.
+I wrote this to assist with making sewing patterns for bike and backpacking bags. If you are interested in sewing your own outdoor gear without making your own patterns, see [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my main website.
 
 # Acknowledgements
 
-The code is heavily inspired and borrowed from the Measure Path and Number Nodes extensions that come pre-installed with Inkscape.
+The code is heavily inspired and borrowed from the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions
 
-It's been a while since I've used Python so excuse any sloppy code.
+It's been a while since I've used Python so please excuse any sloppy code.
