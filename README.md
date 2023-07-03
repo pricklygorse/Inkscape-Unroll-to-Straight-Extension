@@ -4,7 +4,7 @@ Unroll a path/shape into a straight line, maintaining the node spacings that wer
 
 Segments can be straight or bezier curves.
 
-![](images/summary.png)
+![](images/summary.jpeg)
 
 ## Installation
 
@@ -20,27 +20,31 @@ Options to draw just a straight line with nodes, add numbered dots, or label the
 
 An example usage is making a sewing pattern for a bag. You've drawn your side panels and you need to calculate how long your middle strip needs to be, and you want alignment marks along the middle strip piece that align with the side panel corners.
 
-![](images/bag.png)
+![](images/bag.jpeg)
 
 Draw the side panels, select it, then run the extension (Extensions - Visualise Path - Unroll and Flatten)
 
 This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path, which you can use for adding alignment marks, notches, text labels etc.
 
-![](images/unrolled.png)
+![](images/unrolled.jpeg)
 
 If you are a bit lost and can't remember the order you drew the original path, select 'Add numbered dots' in the extension options. You can also add the lengths of the individual segments to each node.
 
-If you have drawn the original path in the wrong order and don't like your starting node, chose your new starting node and use the 'Break Path at Selected Nodes' tool, then re-run the extension.
+If you have drawn the original path in the wrong order and don't like your starting node, chose your new starting node and use the 'Break Path at Selected Nodes' tool, then re-run the extension. Or trace over your old shape with a new path, which is a bit more reliable.
 
-![](images/numbered.png)
+![](images/numbered.jpeg)
 
 Duplicate the path, add the two extra sides, and combine the path to form your middle strip. You can change the stroke style of the nodes, or manually add points and symbols as required for alignment marks/notches.
 
-![](images/unrolled_strip.png)
+![](images/unrolled_strip.jpeg)
 
 Then simply use the offset path effect to add seam allowances. You now have a working sewing pattern. Add any extra useful symbols, using the nodes for alignment if required.
 
-![](images/offset.png)
+![](images/offset.jpeg)
+
+Another example
+
+![](images/example2.jpeg)
 
 # Prickly Gorse Sewing Guides
 
