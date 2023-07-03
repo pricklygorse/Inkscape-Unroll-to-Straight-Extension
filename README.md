@@ -1,8 +1,9 @@
 # Inkscape-Unroll-Flatten-Extension
 
-Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path.
+Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves.
 
-Segments can be straight or bezier curves.
+Tested on Inkscape 1.2 and 1.3 beta
+
 
 ![](images/summary.jpeg)
 
