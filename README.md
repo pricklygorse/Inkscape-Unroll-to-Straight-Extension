@@ -18,7 +18,7 @@ Options to draw just a straight line with nodes, add numbered dots, or label the
 
 ------------------------------------------------------------------------
 
-An example usage is making a sewing pattern for a bag, and you want to add alignment marks/notches. You've drawn the side panels and you need to calculate the middle strip length.
+An example usage is making a sewing pattern for a bag. You've drawn your side panels and you need to calculate how long your middle strip needs to be, and you want alignment marks along the middle strip piece that align with the side panel corners.
 
 ![](images/bag.png)
 
