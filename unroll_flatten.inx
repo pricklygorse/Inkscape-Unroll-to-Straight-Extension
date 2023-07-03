@@ -2,9 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Unroll and Flatten Path</name>
     <id>org.inkscape.visualise.unroll_flatten</id>
-            
-           
-            
             <param name="precision" type="int" min="0" max="25" gui-text="Precision:">2</param>
             <param name="scale" type="float" min="1e-8" max="1e10" precision="3" gui-text="Scale Factor (Real:Drawing Length):">1</param>
             <param name="unit" type="optiongroup" appearance="combo" gui-text="Length Unit:">
