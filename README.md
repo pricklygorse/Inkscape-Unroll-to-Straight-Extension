@@ -49,7 +49,7 @@ Another example
 
 # Prickly Gorse Sewing Guides
 
-I wrote this to assist with making sewing patterns for bike and backpacking bags. If you are interested in sewing your own outdoor gear, see [www.payhip.com/pricklygorse](www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](www.pricklygorsegear.com) for my main website.
+I wrote this to assist with making sewing patterns for bike and backpacking bags. If you are interested in sewing your own outdoor gear, see [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my main website.
 
 # Acknowledgements
 
