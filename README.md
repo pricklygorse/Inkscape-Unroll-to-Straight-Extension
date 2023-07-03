@@ -4,6 +4,8 @@ Unroll a path/shape into a straight line, maintaining the node spacings that wer
 
 Segments can be straight or bezier curves.
 
+![](images/summary.png)
+
 ## Installation
 
 Add the .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Visualise Path.
