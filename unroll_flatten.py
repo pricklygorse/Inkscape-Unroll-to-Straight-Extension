@@ -39,13 +39,7 @@ class MeasureLength(inkex.EffectExtension):
         
 
     def effect(self):
-        # get number of digits
-        prec = int(self.options.precision)
-        scale = self.svg.viewport_to_unit(
-            "1" + self.svg.document_unit
-        )  # convert to document units
-
-        factor = self.svg.unit_to_viewport(1, self.options.unit)
+        
 
         # loop over all selected paths
         filtered = self.svg.selection.filter(inkex.PathElement)
@@ -59,9 +53,7 @@ class MeasureLength(inkex.EffectExtension):
             slengths, stotal = csplength(csp)
             
             # convert segment lengths into user defined units.
-            multiplied = []
-            for number in slengths[0]:
-                 multiplied.append(round(number * factor * self.options.scale, prec))
+           
           
             my_path = PathElement()
 
@@ -92,11 +84,32 @@ class MeasureLength(inkex.EffectExtension):
             # add path to current layer
             current_layer = self.svg.get_current_layer()
             current_layer.append(my_path)
-                        
+            
+       
+            
+            
+           
             
             if not self.options.adddots=="no":
-                self.add_dot(node, '')
-                self.add_dot(my_path, multiplied)
+            
+            
+              # get number of digits
+              prec = int(self.options.precision)
+              # this and the factor line do not work on versions of inkscape earlier than 1.2
+              scale = self.svg.viewport_to_unit(
+                 "1" + self.svg.document_unit
+              )  # convert to document units
+        
+
+              factor = self.svg.unit_to_viewport(1, self.options.unit)
+        
+              multiplied = []
+              for number in slengths[0]:
+                 multiplied.append(round(number * factor * self.options.scale, prec))
+            
+            
+              self.add_dot(node, '')
+              self.add_dot(my_path, multiplied)
             
             
             
