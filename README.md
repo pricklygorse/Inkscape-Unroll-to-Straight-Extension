@@ -2,20 +2,22 @@
 
 Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves.
 
-Requires Inkscape 1.2 or newer (tested on 1.3 beta) for full functionality. Making a line without labeling the nodes works on Inkscape 1.1
+Has been tested on Inkscape 1.1 to 1.3 (beta). Might work with older versions
 
 
 ![](images/summary.jpeg)
 
 ## Installation
 
-Add the .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Visualise Path.
+Check your Inkscape version (Help - About Inkscape). Add the relevant .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Visualise Path - Unroll Path to Straight Path.
 
 ## Usage
 
 Select your path (or paths) and run the extension
 
-Options to draw just a straight line with nodes, add numbered dots, or label the segment lengths. You can choose the decimal precision, scale factor and unit for the segment length labels.
+Shapes need to be converted to paths (Object - Object to Path)
+
+The extension can either convert the path to a stright line with nodes correctly spaced, number the nodes on both the original and new path for checking, or add a label to each path segment with it's length. You can choose decimal precision, scale factor and unit for the segment length labels.
 
 ------------------------------------------------------------------------
 
@@ -23,7 +25,7 @@ An example usage is making a sewing pattern for a bag. You've drawn your side pa
 
 ![](images/bag.jpeg)
 
-Draw the side panels, select it, then run the extension (Extensions - Visualise Path - Unroll and Flatten)
+First Draw the side panels, select it, then run the extension (Extensions - Visualise Path - Unroll Path to Straight Path)
 
 This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path, which you can use for adding alignment marks, notches, text labels etc.
 
