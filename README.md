@@ -13,9 +13,9 @@ Check your Inkscape version (Help - About Inkscape). Add the relevant .inx and .
 
 ## Usage
 
-Select your path (or paths) and run the extension
+Select your path (or paths) and run the extension.
 
-Shapes need to be converted to paths (Object - Object to Path)
+Shapes need to be converted to paths (Object - Object to Path).
 
 The extension can either convert the path to a stright line with nodes correctly spaced, number the nodes on both the original and new path for checking, or add a label to each path segment with it's length. You can choose decimal precision, scale factor and unit for the segment length labels.
 
