@@ -1,11 +1,8 @@
-# Inkscape-Unroll-Flatten-Extension
+# Inkscape-Unroll-to-Straight-Extension
 
 Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves.
 
-Has been tested on Inkscape 1.1 to 1.3 (beta). Might work with older versions
-
-
-![](images/summary.jpeg)
+Has been tested on Inkscape 1.1 to 1.3beta. Might work with older versions
 
 ## Installation
 
@@ -13,48 +10,42 @@ Check your Inkscape version (Help - About Inkscape). Add the relevant .inx and .
 
 ## Usage
 
-Select your path (or paths) and run the extension.
+Select your path (or mulitple individual paths) and run the extension.
 
 Shapes need to be converted to paths (Object - Object to Path).
 
-The extension can either convert the path to a stright line with nodes correctly spaced, number the nodes on both the original and new path for checking, or add a label to each path segment with it's length. You can choose decimal precision, scale factor and unit for the segment length labels.
+The extension can either generate a new straight path with the nodes at the same spacings, number the nodes, label segment lengths, extrude the line to a 2D shape, and add an offset to the extruded shape. You can chose the units, decimal precision, and label prefixes.
 
 ------------------------------------------------------------------------
 
 An example usage is making a sewing pattern for a bag. You've drawn your side panels and you need to calculate how long your middle strip needs to be, and you want alignment marks along the middle strip piece that align with the side panel corners.
 
-![](images/bag.jpeg)
+![](images/bag%20example.png)
 
-First Draw the side panels, select it, then run the extension (Extensions - Visualise Path - Unroll Path to Straight Path)
+Run the extension (Extensions - Visualise Path - Unroll Path to Straight Path)
 
-This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path, which you can use for adding alignment marks, notches, text labels etc.
+This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path. You can generate either a single line (A), a line and an extra group with numbered nodes (B) or labelled segment lengths in the units of your choice (C).
 
-![](images/unrolled.jpeg)
+You can add a label prefix, for example if making a top and bottom line.
 
-If you are a bit lost and can't remember the order you drew the original path, select 'Add numbered dots' in the extension options. You can also add the lengths of the individual segments to each node.
+Numbered nodes are useful if you can't remember which node aligns with which on the original shape. If you have drawn the original path in the wrong order and don't like your starting node, chose your new starting node and use the 'Break Path at Selected Nodes' tool, then re-run the extension. Or trace over your old shape with a new path, which is a bit more reliable if you want to keep it a closed shape.
 
-If you have drawn the original path in the wrong order and don't like your starting node, chose your new starting node and use the 'Break Path at Selected Nodes' tool, then re-run the extension. Or trace over your old shape with a new path, which is a bit more reliable.
+![](images/line%20examples.png)
 
-![](images/numbered.jpeg)
+The extrude and offset features allow you to generate a full middle panel (gusset) with a seam allowance with almost zero effort. Select 'Extrude', and choose your bag width and seam allowance width.
 
-Duplicate the path, add the two extra sides, and combine the path to form your middle strip. You can change the stroke style of the nodes, or manually add points and symbols as required for alignment marks/notches.
+![](images/extrude%20offset.png)
 
-![](images/unrolled_strip.jpeg)
+From here you could add a marker style to the nodes for easy alignment with the side panel when sewing.
 
-Then simply use the offset path effect to add seam allowances. You now have a working sewing pattern. Add any extra useful symbols, using the nodes for alignment if required.
+## Another example
 
-![](images/offset.jpeg)
-
-Another example
-
-![](images/example2.jpeg)
+![](images/example2.png)
 
 # Prickly Gorse Sewing Guides
 
-I wrote this to assist with making sewing patterns for bike and backpacking bags. If you are interested in sewing your own outdoor gear without making your own patterns, see [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my main website.
+I wrote this to assist with making sewing patterns for bike and backpacking bags. Bit of a shameless plug, but if you are interested in sewing your own outdoor gear without making your own patterns, check out [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my main website.
 
 # Acknowledgements
 
-The code is heavily inspired and borrowed from the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions
-
-It's been a while since I've used Python so please excuse any sloppy code.
+The code is heavily inspired and borrowed from the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole.
