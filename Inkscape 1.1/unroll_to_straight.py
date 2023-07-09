@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
-# inkscape 1.2
+# inkscape 1.1, maybe newer
 
 import inkex
 

@@ -24,9 +24,9 @@ An example usage is making a sewing pattern for a bag. You've drawn your side pa
 
 ![](images/bag%20example.png)
 
-Run the extension (Extensions - Visualise Path - Unroll Path to Straight Path)
+Select your shape and run the extension (Extensions - Visualise Path - Unroll Path to Straight Path)
 
-This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path. You can generate either a single line (A), a line and an extra group with numbered nodes (B) or labelled segment lengths in the units of your choice (C).
+This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path. You can generate either a single line (A), a line and an extra group with numbered nodes (B) or labeled segment lengths in the units of your choice (C).
 
 You can add a label prefix, for example if making a top and bottom line.
 

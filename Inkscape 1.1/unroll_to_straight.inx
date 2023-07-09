@@ -16,9 +16,9 @@
 
 
             <param name="unit" type="optiongroup" appearance="combo" gui-text="Length Unit:">
+                <option translatable="no" value="in">in</option>
                 <option translatable="no" value="px">px</option>
                 <option translatable="no" value="pt">pt</option>
-                <option translatable="no" value="in">in</option>
                 <option translatable="no" value="ft">ft</option>
                 <option translatable="no" value="yd">yd</option>
                 <option translatable="no" value="mm">mm</option>
@@ -29,9 +29,9 @@
             <param name="label_prefix" type="string"  gui-text="Label Prefix"></param>
             <label appearance="header">Extrude</label>
             <param name="extrude" type="bool" gui-text="Extrude. Uses length units chosen above">false</param>
-            <param name="extrude_width" type="float" min="0.000" max="99999.000" precision="3" gui-text="Width">10.000</param>
+            <param name="extrude_width" type="float" min="0.000" max="99999.000" precision="3" gui-text="Width">2.0</param>
             <param name="offset" type="bool" gui-text="Add an offset path (e.g. seam allowance)">false</param>
-            <param name="offset_distance" type="float" min="0.000" max="99999.000" precision="3" gui-text="Offset Distance">1.000</param>
+            <param name="offset_distance" type="float" min="0.000" max="99999.000" precision="3" gui-text="Offset Distance">0.5</param>
             
          </page>   
             
