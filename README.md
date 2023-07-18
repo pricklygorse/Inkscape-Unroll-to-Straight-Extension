@@ -2,13 +2,13 @@
 
 Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves.
 
-Has been tested on Inkscape 1.1 to 1.3beta. Might work with older versions
+Has been tested on Inkscape 1.1 to 1.3beta. Might work with older versions.
 
 ![](images/summary.png)
 
 ## Installation
 
-Check your Inkscape version (Help - About Inkscape). Add the relevant .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Visualise Path - Unroll Path to Straight Path.
+Add the .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Visualise Path - Unroll Path to Straight Path.
 
 ## Usage
 
@@ -40,6 +40,8 @@ The extrude and offset features allow you to generate a full middle panel (gusse
 
 From here you could add a marker style to the nodes for easy alignment with the side panel when sewing.
 
+Using the Cumulative Segment Lengths label option is handy for marking out on fabric/paper without needing to print the image itself.
+
 ## Another example
 
 ![](images/example2.png)
@@ -50,4 +52,4 @@ I wrote this to assist with making sewing patterns for bike and backpacking bags
 
 # Acknowledgements
 
-The code is heavily inspired and borrowed from the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole.
+The code is built upon the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole.
