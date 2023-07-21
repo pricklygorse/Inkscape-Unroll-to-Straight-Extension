@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding=utf-8
-# inkscape 1.2
 
 import inkex
 
 from inkex.bezier import csplength
 from inkex import TextElement, Circle, PathElement
+import string
 
 class MeasureLength(inkex.EffectExtension):
    
@@ -23,7 +23,7 @@ class MeasureLength(inkex.EffectExtension):
             help="Number of significant digits after decimal point",
         )
         
-        pars.add_argument('--adddots',  type=inkex.Boolean, default=False     )
+        pars.add_argument('--adddots', default=False     )
         pars.add_argument('--addseglengths')
         
         pars.add_argument('--label_prefix', default='')
@@ -50,7 +50,6 @@ class MeasureLength(inkex.EffectExtension):
         except Exception:
                  
                  viewport_code = False
-        
         
         
         
@@ -171,7 +170,7 @@ class MeasureLength(inkex.EffectExtension):
                 slengths_uu = cumulative
             
             
-            if self.options.adddots==True or not self.options.addseglengths =="no":
+            if not self.options.adddots=="no" or not self.options.addseglengths =="no":
                 
                 # Add dots and labels to the original path
                 self.add_dot(node, slengths_uu)
@@ -259,15 +258,25 @@ class MeasureLength(inkex.EffectExtension):
                 )
             )
             circle.style = style
-                        
-            if self.options.adddots == True and self.options.addseglengths=="no":
-                dot_text  = self.options.label_prefix + str( 1 + step )
+            
+
+            if self.options.adddots == "num":
+                 nodeLabel = str(1+step)
+                
+            elif self.options.adddots == "alpha":
+                 nodeLabel = string.ascii_uppercase[step]
+            
+            
+            if not self.options.adddots == "no" and self.options.addseglengths=="no":
+                #
+                #dot_text  = self.options.label_prefix + str( 1 + step )
+                dot_text  = self.options.label_prefix + nodeLabel
             else:
                 # ugly hack to avoid errors when looking for a non-existent segment length for the last node.
                 try:
                      
-                     if self.options.adddots == True and not self.options.addseglengths =="no":
-                         dot_text = self.options.label_prefix + str(step + 1) +": "+ str(seglengths[step]) + self.options.unit
+                     if not self.options.adddots == "no" and not self.options.addseglengths =="no":
+                         dot_text = self.options.label_prefix + nodeLabel +": "+ str(seglengths[step]) + self.options.unit
                      else:
                          dot_text = self.options.label_prefix + str(seglengths[step]) + self.options.unit
                 except Exception:

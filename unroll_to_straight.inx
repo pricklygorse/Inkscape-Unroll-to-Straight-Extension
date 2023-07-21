@@ -7,7 +7,14 @@
          <page name="general" gui-text="Settings">   
             
             <label appearance="header">Single Straight Line Options</label>
-            <param name="adddots" type="bool" gui-text="Number the path nodes?">false</param>
+        
+            
+             <param name="adddots" type="optiongroup" gui-text="Number the nodes?">
+                  <option value="no">No</option>
+                  <option value="num">Numbers</option>
+                  <option value="alpha">Letters (max 26 nodes)</option>
+            </param>
+            
             
             <param name="addseglengths" type="optiongroup" gui-text="Add segment length labels?">
                   <option value="no">No</option>
