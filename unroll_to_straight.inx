@@ -18,8 +18,8 @@
             
             <param name="addseglengths" type="optiongroup" gui-text="Add segment length labels?">
                   <option value="no">No</option>
-                  <option value="yesseglen">Segment Lengths</option>
-                  <option value="yessegcum">Segment Cumulative Lengths</option>
+                  <option value="segLengths">Segment Lengths</option>
+                  <option value="cumulative">Segment Cumulative Lengths</option>
             </param>
 
 

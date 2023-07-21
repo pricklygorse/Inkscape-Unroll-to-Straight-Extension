@@ -123,10 +123,11 @@ class MeasureLength(inkex.EffectExtension):
             # SVG code for the first point position
             single_line_init = 'M ' +  str(x_initial) + ' ' + str(y_initial) + ' ' 
             
+
+            single_line_svg = ""
+            
             # Draw a horizontal line relative to the previous one the length of
             # the segment
-            single_line_svg = ""
-   
             for i in slengths[0]:
                 single_line_svg =  single_line_svg + "h "+ str(i) + " "
               
@@ -166,7 +167,7 @@ class MeasureLength(inkex.EffectExtension):
             
             # Probably a neater way to do this, but for now just replace what is
             # being passed to the add_dot function
-            if self.options.addseglengths=="yessegcum":
+            if self.options.addseglengths=="cumulative":
                 slengths_uu = cumulative
             
 
@@ -253,13 +254,11 @@ class MeasureLength(inkex.EffectExtension):
                 Circle(
                     cx=str(x),
                     cy=str(y),
-                    #replaced user defined diameter with 10 for simplicity
+                    #replaced user defined diameter with 15 for simplicity
                     r=str(self.svg.unittouu(15) / 2),
                 )
             )
             circle.style = style
-            
-            
 
             if self.options.adddots == "num":
                  nodeLabel = str(1+step)
@@ -267,24 +266,26 @@ class MeasureLength(inkex.EffectExtension):
             elif self.options.adddots == "alpha":
                  nodeLabel = string.ascii_uppercase[step]
             else:
-                nodeLabel = "ddd"
+                nodeLabel = ""
             
-            
-            if not self.options.adddots == "no" and self.options.addseglengths=="no":
-                #
-                #dot_text  = self.options.label_prefix + str( 1 + step )
-                dot_text  = self.options.label_prefix + nodeLabel
-            else:
-                # ugly hack to avoid errors when looking for a non-existent segment length for the last node.
-                try:
+            segLabel = ""
+         
+            # ugly hack to bypass error when looking for a non-existent segment length for the last node.
+            # only applies for segment length labels, cumulative labels have a value for the last node.
+            try:
                      
-                     if not self.options.adddots == "no" and not self.options.addseglengths =="no":
-                         dot_text = self.options.label_prefix + nodeLabel +": "+ str(seglengths[step]) + self.options.unit
-                     else:
-                         dot_text = self.options.label_prefix + str(seglengths[step]) + self.options.unit
-                except Exception:
-                    dot_text=""
-                    pass
+                if not self.options.adddots == "no" and not self.options.addseglengths =="no":
+                    # user wants node numbering and segment lengths
+                    segLabel = ": "+ str(seglengths[step]) + self.options.unit
+                elif self.options.adddots == "no" and not self.options.addseglengths =="no":
+                    # user wants no node numbers but wants segment lengths
+                    segLabel =  str(seglengths[step]) + self.options.unit
+            except Exception:
+                # We are at the last node and there is no segment length for the last node.
+                segLabel=""
+                pass
+            
+            dot_text = self.options.label_prefix + nodeLabel + segLabel
             
             num_group.append(
                 self.add_text(
