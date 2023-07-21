@@ -169,7 +169,7 @@ class MeasureLength(inkex.EffectExtension):
             if self.options.addseglengths=="yessegcum":
                 slengths_uu = cumulative
             
-            
+
             if not self.options.adddots=="no" or not self.options.addseglengths =="no":
                 
                 # Add dots and labels to the original path
@@ -259,12 +259,15 @@ class MeasureLength(inkex.EffectExtension):
             )
             circle.style = style
             
+            
 
             if self.options.adddots == "num":
                  nodeLabel = str(1+step)
                 
             elif self.options.adddots == "alpha":
                  nodeLabel = string.ascii_uppercase[step]
+            else:
+                nodeLabel = "ddd"
             
             
             if not self.options.adddots == "no" and self.options.addseglengths=="no":
