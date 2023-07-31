@@ -2,13 +2,15 @@
 
 Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves.
 
-Has been tested on Inkscape 1.1 to 1.3beta. Might work with older versions.
+Has been tested most on Inkscape 1.2 and 1.3. *Should* work on 1.1, but I recommend updating. Inkscape has improved so much.
 
 ![](images/summary.png)
 
 ## Installation
 
-Add the .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Visualise Path - Unroll Path to Straight Path.
+Add the .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Prickly Gorse - Unroll Path to Straight Path.
+
+I plan to release more related extensions soon, which will all be placed under the Prickly Gorse heading.
 
 ## Usage
 
@@ -24,7 +26,7 @@ An example usage is making a sewing pattern for a bag. You've drawn your side pa
 
 ![](images/bag%20example.png)
 
-Select your shape and run the extension (Extensions - Visualise Path - Unroll Path to Straight Path)
+Select your shape and run the extension (Extensions - Prickly Gorse - Unroll Path to Straight Path).
 
 This produces a line slightly above the original path's bounding box that is the total length of the path, with nodes placed the same distances along as on the original path. You can generate either a single line (A), a line and an extra group with numbered nodes (B) or labeled segment lengths in the units of your choice (C).
 
@@ -48,8 +50,10 @@ Using the Cumulative Segment Lengths label option is handy for marking out on fa
 
 # Prickly Gorse Sewing Guides
 
-I wrote this to assist with making sewing patterns for bike and backpacking bags. Bit of a shameless plug, but if you are interested in sewing your own outdoor gear without making your own patterns, check out [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my main website.
+I wrote this to assist with making sewing patterns for bike and backpacking bags. Bit of a shameless plug, but if you are interested in sewing your own outdoor gear without making your own patterns, check out [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides (some free ones :D ), or [www.pricklygorsegear.com/tutorials-myog](http://www.pricklygorsegear.com/tutorials-myog) for my main website.
+
+You can also donate at this [link](https://www.paypal.com/donate/?business=WBEASYMGED4X8) if you find it useful :)
 
 # Acknowledgements
 
-The code is built upon the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole.
+The code is built upon the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole. Support open source!

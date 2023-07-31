@@ -71,7 +71,7 @@
     <effect>
         <object-type>path</object-type>
         <effects-menu>
-            <submenu name="Visualize Path"/>
+            <submenu name="Prickly Gorse"/>
         </effects-menu>
     </effect>
     <script>
