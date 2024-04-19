@@ -33,6 +33,7 @@ class MeasureLength(inkex.EffectExtension):
         pars.add_argument('--offset', type=inkex.Boolean, default=False)
         pars.add_argument('--offset_distance', type=float, default=1.000)
         pars.add_argument('--textsize', default="10px")
+        pars.add_argument('--initial_n', default=1)
 
     def effect(self):
         
@@ -244,6 +245,9 @@ class MeasureLength(inkex.EffectExtension):
         group: inkex.Group = node.getparent().add(inkex.Group())
         dot_group = group.add(inkex.Group())
         num_group = group.add(inkex.Group())
+        # i think this is to account for layers having transforms, so when
+        # you add stuff to the document it is added relative to the layer transform,
+        # not the absolute document X Y position
         path_trans_applied = node.path.transform(node.composed_transform())
         group.transform = -node.getparent().composed_transform()
 
@@ -261,7 +265,7 @@ class MeasureLength(inkex.EffectExtension):
             circle.style = style
 
             if self.options.adddots == "num":
-                 nodeLabel = str(1+step)
+                 nodeLabel = str(1+step + (int(self.options.initial_n) - 1))
                 
             elif self.options.adddots == "alpha":
                  nodeLabel = string.ascii_uppercase[step]

@@ -48,12 +48,12 @@ Using the Cumulative Segment Lengths label option is handy for marking out on fa
 
 ![](images/example2.png)
 
-# Prickly Gorse Sewing Guides
+## Prickly Gorse / MYOG tutorials Sewing Guides
 
-I wrote this to assist with making sewing patterns for bike and backpacking bags. Bit of a shameless plug, but if you are interested in sewing your own outdoor gear without making your own patterns, check out [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) for my sewing guides (some free ones :D ), or [www.pricklygorsegear.com/tutorials-myog](http://www.pricklygorsegear.com/tutorials-myog) for my main website.
+I wrote this to assist with making sewing patterns for bike and backpacking bags. Bit of a shameless plug, but if you are interested in sewing your own outdoor gear without making your own patterns, check out  [www.myogtutorials.com](http://www.myogtutorials.com) for MYOG sewing focused site (patterns and articles), [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) where my sewing guides are hosted, or [www.pricklygorsegear.com/tutorials-myog](http://www.pricklygorsegear.com/tutorials-myog) for my handmade bags website.
 
 You can also donate at this [link](https://www.paypal.com/donate/?business=WBEASYMGED4X8) if you find it useful :)
 
-# Acknowledgements
+## Acknowledgements
 
 The code is built upon the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole. Support open source!

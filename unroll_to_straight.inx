@@ -14,7 +14,7 @@
                   <option value="num">Numbers</option>
                   <option value="alpha">Letters (max 26 nodes)</option>
             </param>
-            
+            <param name="initial_n" type="int" gui-text="Start numbering from:">1</param>
             
             <param name="addseglengths" type="optiongroup" gui-text="Add segment length labels?">
                   <option value="no">No</option>
