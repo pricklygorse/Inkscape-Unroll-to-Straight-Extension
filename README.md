@@ -1,3 +1,5 @@
+Visit [www.myogtutorials.com](http://www.myogtutorials.com) if you are interested in making your own outdoor gear, using this extension or otherwise!
+
 # Inkscape-Unroll-to-Straight-Extension
 
 Unroll a path/shape into a straight line, maintaining the node spacings that were on the original path. Segments can be straight or bezier curves. Optionally you can add extrude and offset (e.g. add width and seam allowance) to the path.
@@ -44,6 +46,12 @@ From here you could add a marker style to the nodes for easy alignment with the 
 
 ![](images/example2.png)
 
+## Known Issues
+
+Adding offset (seam allowance) to the original shape is still a bit experimental, and the offset path can sometimes be inside the original shape, or the ticks might be instead. You might need to reverse the path. Alignment marks are always added perpendicular to the path, so sharp corners will have two marks.
+
+Sometimes the generated paths might be placed on the wrong position on the canvas, depending on how you selected the path within groups. If this happens, exit out of the group, and reselect. Don’t use CTRL+click to select into groups before running the extension.
+
 ## Prickly Gorse / MYOG tutorials Sewing Guides
 
 I wrote this to assist with making sewing patterns for bike and backpacking bags. Bit of a shameless plug, but if you are interested in sewing your own outdoor gear without making your own patterns, check out  [www.myogtutorials.com](http://www.myogtutorials.com) for MYOG sewing focused site (patterns and articles), [www.payhip.com/pricklygorse](http://www.payhip.com/pricklygorse) where my sewing guides are hosted, or [www.pricklygorsegear.com](http://www.pricklygorsegear.com) for my handmade bags website.
@@ -53,4 +61,5 @@ You can also donate at this [link](https://www.paypal.com/donate/?business=WBEAS
 ## Acknowledgements
 
 The code is built upon the Measure Path and Number Nodes extensions that come pre-installed with Inkscape. Huge thanks to the authors of those extensions, and everyone who has contributed to the Inkscape project as a whole. Support open source!
+
 ------------------------------------------------------------------------
