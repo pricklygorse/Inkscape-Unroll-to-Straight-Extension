@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Unroll Path to Straight Path</name>
-    <id>org.inkscape.visualise.unroll_to_straight</id>
+    <id>org.inkscape.pricklygorse.unroll_to_straight</id>
     <param name="tab" type="notebook">        
             
          <page name="general" gui-text="Settings">   
-            
-            <label appearance="header">Single Straight Line Options</label>
-        
-            
-             <param name="adddots" type="optiongroup" gui-text="Number the nodes?">
-                  <option value="no">No</option>
-                  <option value="num">Numbers</option>
-                  <option value="alpha">Letters (max 26 nodes)</option>
-            </param>
-            <param name="initial_n" type="int" gui-text="Start numbering from:">1</param>
-            
-            <param name="addseglengths" type="optiongroup" gui-text="Add segment length labels?">
-                  <option value="no">No</option>
-                  <option value="segLengths">Segment Lengths</option>
-                  <option value="cumulative">Segment Cumulative Lengths</option>
-            </param>
-
-
             <param name="unit" type="optiongroup" appearance="combo" gui-text="Length Unit:">
                 <option translatable="no" value="in">in</option>
                 <option translatable="no" value="ft">ft</option>
@@ -31,15 +13,50 @@
                 <option translatable="no" value="cm">cm</option>
                 <option translatable="no" value="m">m</option>
             </param>
-            <param name="precision" type="int" min="0" max="25" gui-text="Segment Length Label Decimals">2</param>
-            <param name="label_prefix" type="string"  gui-text="Label Prefix"></param>
-            <param name="textsize" type="string" gui-text="Label text size:">10px</param>
+            <label appearance="header">Single Straight Line Options</label>
+        
+            
+             <param indent="1" name="adddots" type="optiongroup" gui-text="Number the nodes?">
+                  <option value="no">No</option>
+                  <option value="num">Numbers</option>
+                  <option value="alpha">Letters (max 26 nodes)</option>
+            </param>
+            <param indent="1" name="initial_n" type="int" gui-text="Start numbering from:">1</param>
+            
+            <param indent="1" name="addseglengths" type="optiongroup" gui-text="Add segment length labels?">
+                  <option value="no">No</option>
+                  <option value="segLengths">Segment Lengths</option>
+                  <option value="cumulative">Segment Cumulative Lengths</option>
+            </param>
+
+
+            
+            <param indent="1" name="precision" type="int" min="0" max="25" gui-text="Segment Length Label Decimals">2</param>
+            
+            <hbox>
+            <param indent="1" name="label_prefix" type="string"  gui-text="Label Prefix"></param>
+            <spacer size="expand" />
+            <param indent="1" name="textsize" type="string" gui-text="Label text size:">10px</param>
+            </hbox>
+            
             <spacer/>
             <label appearance="header">Extrude</label>
-            <param name="extrude" type="bool" gui-text="Extrude. Uses length units chosen above">false</param>
-            <param name="extrude_width" type="float" min="0.000" max="99999.000" precision="3" gui-text="Width">2.0</param>
-            <param name="offset" type="bool" gui-text="Add an offset path (e.g. seam allowance)">false</param>
-            <param name="offset_distance" type="float" min="0.000" max="99999.000" precision="3" gui-text="Offset Distance">0.5</param>
+            <hbox>
+            <param name="extrude" indent="1" type="bool" gui-text="Extrude">false</param>
+            <spacer size="expand" />
+            <param name="extrude_width" indent="1" type="float" min="0.000" max="99999.000" precision="3" gui-text="Width (in units chosen above)">2.0</param>
+            </hbox>
+            
+            <label appearance="header" indent="1">Offset (e.g. Seam Allowance)</label>
+            <hbox>
+            <param name="offset" indent="2" type="bool" gui-text="Add an offset path (e.g. seam allowance)">false</param>
+            <spacer size="expand" />
+            <param name="offset_distance" indent="2" type="float" min="0.000" max="99999.000" precision="3" gui-text="Offset Width">0.5</param>
+            
+            </hbox>
+            <param name="offset_shape" indent="2" type="bool" gui-text="EXPERIMENTAL: Add offset to original shape.">false</param>
+            
+            <label indent="2">Offset or ticks might be added inside the original shape. You might need to reverse the path. Ticks are always perpendicular to the seam allowance, which means two ticks at sharp corners. The offset path is BLUE to highlight which path has been added</label>
             
          </page>   
             
