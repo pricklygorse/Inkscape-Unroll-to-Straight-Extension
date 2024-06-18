@@ -8,6 +8,11 @@ Has been tested most on Inkscape 1.2 and 1.3. *Should* work on 1.1, but I recomm
 
 ![](images/summary.png)
 
+## Example Video
+
+[unrollextensionvideo.webm](https://github.com/pricklygorse/Inkscape-Unroll-to-Straight-Extension/assets/39905403/1b19756e-08b5-47b0-9c85-f10724993742)
+
+
 ## Installation
 
 Add the .inx and .py files to your Inkscape user extensions folder. You can find this by opening Inkscape Preferences (Edit-Preferences) and selecting the System tab. Restart Inkscape and the extension will appear under Extensions - Prickly Gorse - Unroll Path to Straight Path.
