@@ -102,7 +102,7 @@ class MeasureLength(inkex.EffectExtension):
         
         
         if not filtered:
-            raise inkex.AbortExtension(_("Please select at least one path object."))
+            raise inkex.AbortExtension(_("Please select at least one path object. Shapes need to be converted to a path using the menu option: Object - Object to Path"))
         
         
         tick_style = inkex.Style(
