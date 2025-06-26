@@ -42,21 +42,21 @@
             <spacer/>
             <label appearance="header">Extrude</label>
             <hbox>
-            <param name="extrude" indent="1" type="bool" gui-text="Extrude">false</param>
+            <param name="extrude" indent="1" type="bool" gui-text="Extrude (Make Rectangle)">false</param>
             <spacer size="expand" />
             <param name="extrude_width" indent="1" type="float" min="0.000" max="99999.000" precision="3" gui-text="Width (in units chosen above)">2.0</param>
             </hbox>
             
-            <label appearance="header" indent="1">Offset (e.g. Seam Allowance)</label>
+            <label appearance="header" indent="3">Offset (e.g. Seam Allowance)</label>
             <hbox>
-            <param name="offset" indent="2" type="bool" gui-text="Add an offset path (e.g. seam allowance)">false</param>
+            <param name="offset" indent="3" type="bool" gui-text="Add an offset path (e.g. seam allowance)">false</param>
             <spacer size="expand" />
-            <param name="offset_distance" indent="2" type="float" min="0.000" max="99999.000" precision="3" gui-text="Offset Width">0.5</param>
+            <param name="offset_distance" indent="3" type="float" min="0.000" max="99999.000" precision="3" gui-text="Offset Width">0.5</param>
             
             </hbox>
-            <param name="offset_shape" indent="2" type="bool" gui-text="EXPERIMENTAL: Add offset to original shape.">false</param>
+            <param name="offset_shape" indent="3" type="bool" gui-text="EXPERIMENTAL: Add offset to original shape.">false</param>
             
-            <label indent="2">Offset or ticks might be added inside the original shape. You might need to reverse the path. Ticks are always perpendicular to the seam allowance, which means two ticks at sharp corners. The offset path is BLUE to highlight which path has been added</label>
+            <label indent="3">Offset or ticks might be added inside the original shape. You might need to reverse the path. Ticks are always perpendicular to the seam allowance, which means two ticks at sharp corners. The offset path is BLUE to highlight which path has been added</label>
             
          </page>   
             
@@ -77,7 +77,7 @@
             <label appearance="url">https://github.com/pricklygorse/Inkscape-Unroll-to-Straight-Extension</label>
             <label appearance="header">Donate</label>
             <label>If you find this useful and want to donate a coffee</label>
-            <label appearance="url">https://www.paypal.com/donate/?business=WBEASYMGED4X8</label>
+            <label appearance="url">https://www.ko-fi.com/pricklygorse</label>
             
             
             <spacer/>
